@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exploria</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="game-wrapper">
+    <canvas id="gameCanvas" width="800" height="480"></canvas>
+
+    <div id="inventory-panel">
+      <h2>Inventory</h2>
+      <div id="inv-items">No items yet.</div>
+      <p class="inv-close">Press I to close</p>
+    </div>
+
+    <div id="win-overlay" class="overlay" style="display:none">
+      <div class="overlay-box">
+        <div class="overlay-title win-title">⭐ You Win!</div>
+        <p>You defeated the boss!</p>
+        <button onclick="location.reload()">Restart</button>
+      </div>
+    </div>
+
+    <div id="lose-overlay" class="overlay" style="display:none">
+      <div class="overlay-box">
+        <div class="overlay-title lose-title">💀 You Lose...</div>
+        <p>The boss defeated you.</p>
+        <button onclick="location.reload()">Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/game.js"></script>
+</body>
+</html>
